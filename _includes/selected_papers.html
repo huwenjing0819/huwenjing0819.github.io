@@ -13,7 +13,7 @@
   <!--{% assign publications = site.publications | sort: "year" | reverse %}-->
   {% assign sticky_pubs = site.publications | where_exp: "item", "item.sticky" | sort: "year" | reverse %}
   {% assign non_sticky_pubs = site.publications | where_exp: "item", "item.sticky != true" | sort: "year" | reverse %}
-  {% assign publications = sticky_pubs | concat: non_sticky_pubs %} 
+  {% assign publications = sticky_pubs | concat: non_sticky_pubs %}  
 
   {% for pub in publications %}
   <div class="pubitem mb-3">
@@ -26,11 +26,7 @@
     </div>
     <div class="pubauthors">{{ pub.authors }}</div>
     <div class="pubinfo">
-      {% if pub.publication != '' %}
-        In {{ pub.publication }}.
-      {% else %}
-        Under submission.
-      {% endif %}
+      {{ pub.publication }}
     </div>
     <div class="row mt-1">
       {% if pub.pdf != '' %}
