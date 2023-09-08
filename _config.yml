@@ -154,7 +154,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: Wenjing Hu # put your disqus shortname
+disqus_shortname: WenjingHu # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -177,6 +177,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  publications:
+    output: true
+    permalink: /:collection/:name
 
 announcements:
   enabled: true
