@@ -115,7 +115,7 @@ pagination:
         {% if post.redirect == blank %}
           <a class="post-title" href="{{ post.url | relative_url }}" style="font-size: 20px; color: var(--global-theme-color)">{{ post.title }}</a>
         {% elsif post.redirect contains '://' %}
-          <a class="post-title" href="{{ post.redirect }}" target="_blank" >{{ post.title }}</a>
+          <a class="post-title" href="{{ post.redirect }}" style="font-size: 20px; color: var(--global-theme-color)" target="_blank" >{{ post.title }}</a>
         {% else %}
           <a class="post-title" href="{{ post.redirect | relative_url }}" >{{ post.title }}</a>
         {% endif %}
